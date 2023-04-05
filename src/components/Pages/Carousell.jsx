@@ -1,45 +1,45 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import { Link } from 'react-router-dom';
+import React from "react";
+import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
 
 export const Carousell = () => {
+  const RUTA = '/forter-intranet'
 
   return (
-    <div className='mt-5 d-flex justify-content-center carousel'>
-
-        <Carousel fade variant="dark" className='arrows'>
-
-        <Carousel.Item>
-          <Link to='/calendario'>
-            <img
+    <div className="allCarousel">
+      <div className=" d-flex justify-content-center carousel">
+        <Carousel fade variant="dark" className="arrows">
+          <Carousel.Item>
+            <Link to={`${RUTA}/calendario`}>
+              <img
                 className="d-block"
-                src= './noticias/01.jpg'
+                src= {`${RUTA}/noticias/02.jpg`}
                 alt="First slide"
-            />
-          </Link>
-        </Carousel.Item>
+              />
+            </Link>
+          </Carousel.Item>
 
-        <Carousel.Item >
-        <Link to='/calendario'>
-            <img
+          <Carousel.Item>
+            <Link to= {`${RUTA}/calendario`}>
+              <img
                 className="d-block"
-                src= './noticias/02.jpg'
+                src= {`${RUTA}/noticias/01.jpg`}
                 alt="First slide"
-            />
-          </Link>
-        </Carousel.Item>
+              />
+            </Link>
+          </Carousel.Item>
 
-        <Carousel.Item >
-        <Link to='/calendario'>
-            <img
+          <Carousel.Item>
+            <Link to= {`${RUTA}/calendario`}>
+              <img
                 className="d-block"
-                src= './noticias/03.jpg'
+                src= {`${RUTA}/noticias/03.jpg`}
                 alt="First slide"
-            />
-          </Link>
-        </Carousel.Item>
-        
-    </Carousel>
+              />
+            </Link>
+          </Carousel.Item>
+        </Carousel>
+      </div>
     </div>
   );
 };

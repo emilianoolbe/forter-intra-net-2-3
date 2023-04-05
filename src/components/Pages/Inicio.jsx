@@ -3,7 +3,7 @@ import { Carousell } from "./Carousell";
 import { Cumpleaños } from "./Cumpleaños";
 
 
-export const Inicio = () => {
+export const Inicio = ({noticas}) => {
 
   //Estados
   const [pagina, setPagina] = useState(1);

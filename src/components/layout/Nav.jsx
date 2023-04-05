@@ -5,16 +5,18 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink } from "react-router-dom";
 
 export const NavBarN = () => {
+  const RUTA = '/forter-intranet'
+
   return (
     <>
       <Navbar expand="lg" bg="dark"  variant="dark">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav ">
-          <Nav className="ms-auto nav" >
+          <Nav className="ms-auto nav fs-5" >
          
            
-              <NavLink to="/" className='ancor ms-3'>Inicio</NavLink>
+              <NavLink to = {RUTA} className='ancor ms-3'>Inicio</NavLink>
           
             <NavDropdown className="ancor2 ms-3" title="Personal" id="basic-nav-dropdown">
               <NavDropdown.Item href="https://beta.es.reactjs.org/" target='_blank'>Action</NavDropdown.Item>
@@ -47,7 +49,7 @@ export const NavBarN = () => {
             </NavDropdown>
             
               
-              <NavLink to="/calendario" className='ancor ms-3 me-4' >Calendario</NavLink>
+              <NavLink to = {`${RUTA}/calendario`} className='ancor ms-3 me-4' >Calendario</NavLink>
             
           </Nav>
         </Navbar.Collapse>

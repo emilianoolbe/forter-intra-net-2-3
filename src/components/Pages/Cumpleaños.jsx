@@ -38,16 +38,16 @@ export const Cumpleaños = ({ pagina }) => {
     );
   } else if (errores === "") {
     return (
-      <div className="  row justify-content-around align-items-center mt-4 mb-4">
+      <div className="cumpleaños row justify-content-center mt-5 mb-4">
         <h3 className="text-center">Cumpleaños del mes</h3>
 
         {funcionarios.map((empleado, i) => {
           return (
-            <div className="container col-xxl-3 col-lg-4 col-md-6 col-sm-8 row me-5 justify-content-center aling-items-center" key={i} >
-              <div className="">
+            <div className = "row justify-content-center aling-items-center  col-lg-4 col-md-12 all" key={i} >
+           
                 <Card
-                  style={{ width: "14rem" }}
-                  className="card"
+                  style={{ width: "12rem" }}
+                  className="card row justify-content-center align-items-center"
                   border="light"
                 >
                   <div>
@@ -63,16 +63,14 @@ export const Cumpleaños = ({ pagina }) => {
                     <ListGroup className="text-dark fw-bold list" border="light">
                       <ListGroup.Item>Edad: </ListGroup.Item>
                       <ListGroup.Item>Fecha:</ListGroup.Item>
-                      <ListGroup.Item>Sector: Desarrollo</ListGroup.Item>
-                      <ListGroup.Item>Cargo:</ListGroup.Item>
+                      <ListGroup.Item>Sector:</ListGroup.Item>
+                 
       
                     </ListGroup>
                   </Card.Body>
                   </div>
 
-                </Card>
-              </div>
-             
+                </Card>             
             </div>
           );
         })}
