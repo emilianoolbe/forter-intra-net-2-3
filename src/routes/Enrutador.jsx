@@ -56,8 +56,6 @@ export const Enrutador = () => {
     },
   ];
 
-  const RUTA = '/forter-intranet';
-
   return (
     <>
       <BrowserRouter>
@@ -66,9 +64,9 @@ export const Enrutador = () => {
 
         {/* Contenido */}
         <Routes>
-          <Route exact path= {RUTA} element={<Inicio noticias={noticias} />} />
-          <Route exact path= {`${RUTA}/calendario`} element={<Calendario noticias={noticias} />} />
-          <Route exact path= {`${RUTA}/noticia/:id`} element={<Noticia noticias= {noticias}/>} />
+          <Route exact path= {import.meta.env.VITE_URL} element={<Inicio noticias={noticias} />} />
+          <Route exact path= {`${import.meta.env.VITE_URL}/calendario`} element={<Calendario noticias={noticias} />} />
+          <Route exact path= {`${import.meta.env.VITE_URL}/noticia/:id`} element={<Noticia noticias= {noticias}/>} />
           <Route path="*" element={<Error404 />} />
         </Routes>
 

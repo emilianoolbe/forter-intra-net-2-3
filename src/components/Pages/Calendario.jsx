@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Calendario = ({noticias}) => {
-
-  const RUTA = '/forter-intranet';
   
   return (
     <div className="calendario">
@@ -21,7 +19,7 @@ export const Calendario = ({noticias}) => {
               </div>
     
               <p>
-                {noticia.descripcion} <Link className="ancor-noticia" to= {`${RUTA}/noticia/${noticia.id}`} > Ver más...</Link>
+                {noticia.descripcion} <Link className="ancor-noticia" to= {`${import.meta.env.VITE_URL}/noticia/${noticia.id}`} > Ver más...</Link>
               </p>
             </div>
             )
