@@ -36,7 +36,7 @@ export const Enrutador = () => {
   };
   
 
-  if (usuario === '') {
+  if (usuario === '' && error !== '' ) {
     return (
       <>
         <div className="header-login bg-dark text-light">
@@ -56,7 +56,7 @@ export const Enrutador = () => {
       </>
     )
 
-  }else if (usuario === '' && error !== ''){
+  }else if (usuario === '' && error === ''){
 
     
     return (
