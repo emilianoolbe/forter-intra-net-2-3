@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import { Enrutador } from './routes/Enrutador'
+import { Enrutador } from './routes/Enrutador';
 
 function App() {
 

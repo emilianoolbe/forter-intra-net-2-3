@@ -4,8 +4,16 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink } from "react-router-dom";
 
-export const NavBarN = () => {
+export const NavBarN = ({usuario, setUsuario}) => {
 
+  //Métodos 
+  const handlerLogout = () => {
+    
+    setUsuario('');
+    {/* Quitar de sesión */}
+
+  };
+  
   return (
     <>
       <Navbar expand="lg" bg="dark"  variant="dark">
@@ -46,10 +54,10 @@ export const NavBarN = () => {
 
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
             </NavDropdown>
-            
               
               <NavLink to = {`${import.meta.env.VITE_URL}/calendario`} className='ancor ms-3 me-4' >Calendario</NavLink>
-            
+
+              <NavLink to = {`${import.meta.env.VITE_URL}`} onClick={handlerLogout} className='ancor me-3'> Salir </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

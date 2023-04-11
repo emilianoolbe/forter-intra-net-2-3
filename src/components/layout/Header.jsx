@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavBarN } from './Nav'
 
-export const Header = () => {
+export const Header = ({usuario, setUsuario}) => {
   return (
     <header className='header row bg-dark text-light'>
       
@@ -10,7 +10,7 @@ export const Header = () => {
       </div>
 
       <div className='fs-5 col'>
-        <NavBarN />
+        <NavBarN usuario = {usuario} setUsuario = {setUsuario}/>
       </div>
      
     </header>

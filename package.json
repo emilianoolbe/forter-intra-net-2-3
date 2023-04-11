@@ -1,7 +1,7 @@
 {
   "name": "forter-intra-net",
   "private": true,
-  "homepage": "http://desktop-obbpkg1/aaaaa/",
+  "homepage": "http://desktop-obbpkg1/forter-intranet/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "babel-plugin-macros": "^3.1.0",
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
