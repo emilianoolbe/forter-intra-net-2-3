@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { Inicio } from "../components/Pages/Inicio";
 import { Footer } from "../components/layout/Footer";
@@ -6,73 +6,95 @@ import { Header } from "../components/layout/Header";
 import { Calendario } from "../components/Pages/Calendario";
 import { Error404 } from "../components/Pages/Error404";
 import { Noticia } from "../components/Pages/Noticia";
+import {noticias} from '../helpers/data';
 
 export const Enrutador = () => {
-  let noticias = [
-    {
-      id: 5,
-      titulo: "Titulo noticia 5",
-      descripcion:
-        "Breve descripción -sectetur adipisicing elit. Repudiandae odit et, quos illum esse ducimus atque tempore, facere r",
-      informacion:
-        "             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt cum rem magnam iusto, corporis, a voluptatibus eligendi excepturi aspernatur unde, minus architecto molestiae. Nobis iure adipisci modi ratione ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae odit et, quos illum esse ducimus atque tempore, facere ratione iure doloribus fugit minima. Eos, esse ut voluptate at pariatur voluptatibus",
-      img: "./noticias/01.jpg",
-    },
-    {
-      id: 4,
-      titulo: "Titulo noticia 4",
-      descripcion:
-        "Breve descripción -sectetur adipisicing elit. Repudiandae odit et, quos illum esse ducimus atque tempore, facere r",
-      informacion:
-        "             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt cum rem magnam iusto, corporis, a voluptatibus eligendi excepturi aspernatur unde, minus architecto molestiae. Nobis iure adipisci modi ratione ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae odit et, quos illum esse ducimus atque tempore, facere ratione iure doloribus fugit minima. Eos, esse ut voluptate at pariatur voluptatibus",
-      img: "./noticias/03.jpg",
-    },
-    {
-      id: 3,
-      titulo: "Titulo noticia 3",
-      descripcion:
-        "Breve descripción -sectetur adipisicing elit. Repudiandae odit et, quos illum esse ducimus atque tempore, facere r",
-      informacion:
-        "             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt cum rem magnam iusto, corporis, a voluptatibus eligendi excepturi aspernatur unde, minus architecto molestiae. Nobis iure adipisci modi ratione ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae odit et, quos illum esse ducimus atque tempore, facere ratione iure doloribus fugit minima. Eos, esse ut voluptate at pariatur voluptatibus",
-      img: "./noticias/03.jpg",
-    },
-    {
-      id: 2,
-      titulo: "Titulo noticia 2",
-      descripcion:
-        "Breve descripción -sectetur adipisicing elit. Repudiandae odit et, quos illum esse ducimus atque tempore, facere r",
-      informacion:
-        "             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt cum rem magnam iusto, corporis, a voluptatibus eligendi excepturi aspernatur unde, minus architecto molestiae. Nobis iure adipisci modi ratione ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae odit et, quos illum esse ducimus atque tempore, facere ratione iure doloribus fugit minima. Eos, esse ut voluptate at pariatur voluptatibus",
-      img: "./noticias/01.jpg",
-    },
-    {
-      id: 1,
-      titulo: "Titulo noticia 1",
-      descripcion:
-        "Breve descripción - sectetur adipisicing elit. Repudiandae odit et, quos illum esse ducimus atque tempore, facere r",
-      informacion:
-        "             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt cum rem magnam iusto, corporis, a voluptatibus eligendi excepturi aspernatur unde, minus architecto molestiae. Nobis iure adipisci modi ratione ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae odit et, quos illum esse ducimus atque tempore, facere ratione iure doloribus fugit minima. Eos, esse ut voluptate at pariatur voluptatibus",
-      img: "./noticias/02.jpg",
-    },
-  ];
 
-  return (
-    <>
-      <BrowserRouter>
-        {/* Header */}
-        <Header />
+  //Estados
+  const [usuario, setUsuario] = useState('');
+  const [error, setError] = useState('');
 
-        {/* Contenido */}
-        <Routes>
-          <Route exact path= {import.meta.env.VITE_URL} element={<Inicio noticias={noticias} />} />
-          <Route exact path= {`${import.meta.env.VITE_URL}/calendario`} element={<Calendario noticias={noticias} />} />
-          <Route exact path= {`${import.meta.env.VITE_URL}/noticia/:id`} element={<Noticia noticias= {noticias}/>} />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
+  //Métodos
 
-        {/* Footer */}
-        <Footer />
-      </BrowserRouter>
-    </>
-  );
+  const handlerLogin = e => {
+      e.preventDefault();
+
+      if (e.target.email.value === '' || e.target.password.value === '') {
+        
+        setError('Para poder inciar sesión debe ingresar usuario y contraseña'); 
+      
+      }else{
+        let usuario = {
+            email: e.target.email.value,
+            password: e.target.password.value
+        };
+  
+        {/* CONSULTA A API */ }
+        setUsuario(usuario);
+        setError('');
+      };
+  };
+  
+
+  if (usuario === '' && error !== '' ) {
+    return (
+      <>
+        <div className="header-login bg-dark text-light">
+          <div className=" fs-1 fw-bold ms-4">FORTER</div>
+        </div>
+
+        <div className="container login">
+
+          <div className="error-login">{error}</div>
+
+          <form onSubmit={handlerLogin}>
+            <input type="text" name="email" placeholder='Usuario' />
+            <input type="password" name="password" placeholder='Contraseña' />
+            <input type="submit" value="Login" />
+          </form>
+        </div>
+      </>
+    )
+
+  }else if (usuario === '' && error === ''){
+
+    
+    return (
+      <>
+        <div className="header-login bg-dark text-light">
+          <div className=" fs-1 fw-bold ms-4">FORTER</div>
+        </div>
+        
+        <div className="container login">
+            <form onSubmit={handlerLogin}>
+              <input type="text" name="email" placeholder='Usuario' />
+              <input type="password" name="password" placeholder='Contraseña' />
+              <input type="submit" value="Login" />
+            </form>
+        </div>
+      </>
+    )
+
+  }else if(usuario !== '' && error === ''){
+
+    return (
+      <>
+        <BrowserRouter>
+          {/* Header */}
+          <Header usuario = {usuario} setUsuario = {setUsuario}/>
+    
+          {/* Contenido */}
+          <Routes>
+            <Route exact path= {import.meta.env.VITE_URL} element={<Inicio noticias={noticias} />} />
+            <Route exact path= {`${import.meta.env.VITE_URL}/calendario`} element={<Calendario noticias={noticias} />} />
+            <Route exact path= {`${import.meta.env.VITE_URL}/noticia/:id`} element={<Noticia noticias= {noticias}/>} />
+            <Route path="*" element={<Error404 />} />
+          </Routes>
+    
+          {/* Footer */}
+          <Footer />
+        </BrowserRouter>
+      </>
+    );
+  }
 };
