@@ -1,0 +1,32 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import '../../../public/styles/noticias.css';
+
+export const Noticias = ({noticias}) => {
+  
+  return (
+    <div className="calendario">
+      <p className="fs-4 fw-bold text-center mt-4">Todas las noticias</p>
+
+      <div className="row calendario-contenido">
+        {
+          noticias.map((noticia, i) => {
+            return(
+              <div className="noticia-item col-3" key={i}>
+              <p className="fs-5 fw-bold">{noticia.titulo}</p>
+    
+              <div>
+                <img className="d-blok" src={noticia.img}/>
+              </div>
+    
+              <p>
+                {noticia.descripcion} <Link className="ancor-noticia" to= {`${import.meta.env.VITE_URL}/noticia/${noticia.id}`} > Ver más...</Link>
+              </p>
+            </div>
+            )
+          })
+        }
+      </div>
+    </div>
+  );
+};

@@ -1,0 +1,46 @@
+/* Carousel cumpleaños */
+
+#carouselCumpleaños{
+    width: 30%;
+    height: 100%;
+    margin-top: 100px ;
+}
+#carouselCumpleaños-item{
+    display: flex;
+    align-items: self-start;
+}
+#carouselCumpleaños-item img{
+    border-radius: 144.52px;
+    border: 4px solid #262D33;  
+}
+
+    /* Mueve el caption al centro de la izquierda del Carousel */
+
+#carouselCumpleaños-caption{
+    color: #E87575;
+    font-family: Gotham;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    width: min-content;
+    margin-right: 10px;
+}
+.carousel-control-prev-icon {
+    display: none;
+}
+#carouselCumpleaños-caption button{
+    font-family: Gotham;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.16px;
+    text-transform: uppercase;
+    width: 251px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 1px solid var(--Dark, #353132);
+}

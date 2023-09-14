@@ -1,11 +1,7 @@
 {
   "name": "forter-intra-net",
   "private": true,
-<<<<<<< HEAD
-  "homepage": "http://desktop-vjqi86n/intranet/",
-=======
   "homepage": "http://desktop-obbpkg1/forter-intranet/",
->>>>>>> 5265aedf4b8f15501f4c2ae05528fd2cc20bbb2c
   "version": "0.0.0",
   "type": "module",
   "scripts": {

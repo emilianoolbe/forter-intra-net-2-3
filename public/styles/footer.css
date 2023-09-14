@@ -1,0 +1,16 @@
+/* Footer */
+
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #353132;
+        color: #FFFFFF;
+        grid-area: footer;
+        height: 60px;
+    }
+    .IsowiseIcon{
+        width: 120px;
+        height: 30px;
+        flex-shrink: 0;
+    }

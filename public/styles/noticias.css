@@ -1,0 +1,14 @@
+.calendario{
+    grid-area: contenido;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.calendario-contenido{
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: center;
+    align-items: center;
+}

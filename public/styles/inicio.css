@@ -1,0 +1,10 @@
+.inicio{
+    grid-area: contenido;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:max-content;
+}

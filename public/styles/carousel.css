@@ -1,0 +1,63 @@
+/* Carousel Portada */
+
+.allCarousel{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#carouselPortada{
+    width: 100%;
+}
+#carouselPortada-item img{
+    object-fit: cover;
+    width: 100vw;
+    height: 550px;
+    overflow:hidden;   
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: white;
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+    margin: 0 5px; /* Espacio entre los indicadores */
+    border-radius: 50%; /* Hace que los indicadores sean círculos */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    fill: white; /* Relleno transparente para el centro */
+    box-shadow: inset 0 0 0 3px #353132; /* Aplica un sombreado hacia adentro para simular un borde */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave de color de fondo y sombreado */
+
+}
+.carousel-dark .carousel-indicators .active {
+    background-color: white; /* Establece el color de fondo del indicador activo en transparente */
+    width: 21px; /* Ancho del indicador activo */
+    height: 21px; /* Altura del indicador activo */
+    fill: white; /* Relleno transparente para el centro */
+    padding: 0; /* Sin espacio interno alrededor del indicador activo */
+    border-radius: 50%; /* Hace que el indicador activo sea un círculo */
+    box-shadow: inset 0 0 0 7px #353132; /* Aplica un sombreado hacia adentro para simular un borde */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave de color de fondo y sombreado */
+}
+
+/* Mueve el caption al centro de la izquierda del Carousel */
+
+#carouselCaption-item {
+    position: absolute;
+    top: 65%; /* Alinea la parte superior del caption al 50% de la altura del Carousel */
+    left: 10;
+    transform: translate(0, -50%); /* Centra verticalmente el caption en relación con su altura */
+    color: #353132; /* Color del texto */
+    padding: 10px; /* Espacio interior alrededor del caption */
+}
+
+.leer-mas-container{
+    text-align: start;
+    background-color: #353132;
+    color: #FFFFFF;
+    width: max-content;
+    padding: 2px 10px 2px 10px;
+    border-radius: 10%;
+    font-weight: bold;
+}

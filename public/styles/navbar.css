@@ -1,0 +1,36 @@
+/* NavBar*/
+
+    .navNar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;    
+    }
+    .title-forter{
+        margin-right: 60px;
+        font-family: Gotham;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+    }
+    .ancor {
+        text-decoration: none;
+        color: #353132;   
+        transition: all 300ms;
+        margin-right: 60px;
+        font-weight: normal;  
+        transition:  transform 0.3s; 
+    }
+    .ancor:hover, .ancor:focus, .isActive:hover, .isActive:focus{
+        color: #353132;
+        transform: translate(0);
+        font-weight: bold;
+        outline: none;
+    }
+    .isActive{
+        text-decoration: none;
+        color: #353132;      
+        margin-right: 60px;
+        font-weight: bold;
+        color: #353132;
+    }

@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { Inicio } from "../components/Pages/Inicio";
+import { Inicio } from "../components/Pages/inicio/Inicio";
 import { Footer } from "../components/layout/Footer";
 import { Header } from "../components/layout/Header";
-import { Calendario } from "../components/Pages/Calendario";
+import { Noticias } from "../components/Pages/Noticias";
 import { Error404 } from "../components/Pages/Error404";
 import { Noticia } from "../components/Pages/Noticia";
-import {noticias} from '../helpers/data';
+import { Sugerencias } from "../components/Pages/Sugerencias";
+import { noticias } from '../helpers/data';
+import { Calendario } from "../components/Pages/Calendario";
+import '../../public/styles/login.css';
 
 export const Enrutador = () => {
 
@@ -85,9 +88,11 @@ export const Enrutador = () => {
     
           {/* Contenido */}
           <Routes>
-            <Route exact path= {import.meta.env.VITE_URL} element={<Inicio noticias={noticias} />} />
-            <Route exact path= {`${import.meta.env.VITE_URL}/calendario`} element={<Calendario noticias={noticias} />} />
+            <Route exact path= '/' element={<Inicio noticias={noticias} />} />
+            <Route exact path= {`${import.meta.env.VITE_URL}/noticias`} element={<Noticias noticias={noticias} />} />
             <Route exact path= {`${import.meta.env.VITE_URL}/noticia/:id`} element={<Noticia noticias= {noticias}/>} />
+            <Route exact path= {`${import.meta.env.VITE_URL}/calendario`} element={<Calendario/>} />                        
+            <Route exact path= {`${import.meta.env.VITE_URL}/sugerencias`} element={<Sugerencias/>} />
             <Route path="*" element={<Error404 />} />
           </Routes>
     
