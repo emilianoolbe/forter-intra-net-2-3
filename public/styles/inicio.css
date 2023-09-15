@@ -1,10 +1,20 @@
 .inicio{
-    grid-area: contenido;
-    display: flex;
-    flex-flow: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    grid-area: contenido;   
     width: 100%;
     height:max-content;
+}
+
+.sorteos{
+    padding: 50px;
+    background-color: #353132; 
+    width: 100%;
+}
+
+.sugerencias{
+    margin: 20px 0px 20px 0px;
+    padding: 20px;
+}
+
+.cumpleaños-container{
+    align-self: center;
 }

@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 import { Carousell } from "./components/Carousell";
 import { Cumpleaños } from "./components/Cumpleaños";
+import { Calendario } from "./components/Calendario";
+import { Sorteos } from "./components/Sorteos";
+import { Sugerencias } from "./components/Sugerencias";
 import '../../../../public/styles/inicio.css';
 
 
@@ -23,17 +26,26 @@ export const Inicio = ({noticas}) => {
   };
 
   return (
-    <div className="inicio">
-      {/* Carousel */}
+    <div className="inicio row justify-content-center">      
       <Carousell />
 
-      {/* Datos de funcionarios */}      
-      <Cumpleaños pagina={pagina}/>
+    
+          <div className="calendario-container  col-4 ms-5"  >
+            <Calendario />
+          </div>
 
-      {/* <div className="botones mt-2 mb-3">
-        <button className="ms-2 botenesB" onClick={cambiarPag} ref={refPagina1} > 1 </button>
-        <button className="ms-2 botenesB" onClick={cambiarPag} ref={refPagina2} > 2 </button>
-      </div> */}
+          <div className="cumpleaños-container col-4 ms-5" >     
+            <Cumpleaños pagina={pagina}/>            
+          </div>
+
+          <div className="sorteos col-8">          
+            <Sorteos />
+          </div>
+
+          <div className="sugerencias col-8">
+            <Sugerencias />
+          </div>
+    
 
     </div>
   );

@@ -6,9 +6,9 @@ import { Header } from "../components/layout/Header";
 import { Noticias } from "../components/Pages/Noticias";
 import { Error404 } from "../components/Pages/Error404";
 import { Noticia } from "../components/Pages/Noticia";
-import { Sugerencias } from "../components/Pages/Sugerencias";
+import { Sugerencias } from "../components/Pages/inicio/components/Sugerencias";
 import { noticias } from '../helpers/data';
-import { Calendario } from "../components/Pages/Calendario";
+import { Calendario } from "../components/Pages/inicio/components/Calendario";
 import '../../public/styles/login.css';
 
 export const Enrutador = () => {
@@ -18,7 +18,6 @@ export const Enrutador = () => {
   const [error, setError] = useState('');
 
   //Métodos
-
   const handlerLogin = e => {
       e.preventDefault();
 
