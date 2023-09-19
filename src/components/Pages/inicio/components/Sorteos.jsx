@@ -3,9 +3,9 @@ import '../../../../../public/styles/sorteos.css';
 
 export const Sorteos = () => {
   return (
-    <div className='sorteos-container row justify-content-center aling-items-center p-5'>
+    <div className='sorteos row justify-content-center aling-items-center p-5'>
 
-        <div className='col-4'>
+        <div className='col-5'>
             <div className='ganador'>
                 <img src="../../../../../../../public/avatar/ganador-avatar.jpeg" alt=""/>
                 <div>
@@ -25,44 +25,41 @@ export const Sorteos = () => {
                 VERT TODOS
             </button>
         </div>
+        <div className='col row justify-content-center aling-items-center'>
 
-        <div className='sorteo-card col-1'>
-            <h3>Sorteo 1</h3>
-            <div>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Maxime laudantium fugit quaerat doloremque, voluptatum facere aut repellat, 
-                voluptate illo, perspiciatis consectetur aperiam incidunt deserunt ad exercitationem. 
-                Quasi ut eveniet consequatur.
+            <div className='sorteo-card col'>
+                <h3>Sorteo 1</h3>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Facere quam reiciendis eveniet iste unde impedit, qui molestias accusamus quae minima corporis asperiores
+                </div>
+                <button className='sorteo-button'>
+                    PARTICIPAR
+                </button>
             </div>
-            <button className='sorteo-button'>
-                PARTICIPAR
-            </button>
-        </div>
 
-        <div className='sorteo-card col-1'>
-            <h3>Sorteo 2</h3>
-            <div>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Maxime laudantium fugit quaerat doloremque, voluptatum facere aut repellat, 
-                voluptate illo, perspiciatis consectetur aperiam incidunt deserunt ad exercitationem. 
-                Quasi ut eveniet consequatur.
+            <div className='sorteo-card col'>
+                <h3>Sorteo 2</h3>
+                <div>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Facere quam reiciendis eveniet iste unde impedit, qui molestias accusamus quae minima corporis asperiores
+                </div>
+                <button  className='sorteo-button'>
+                    PARTICIPAR
+                </button>
             </div>
-            <button  className='sorteo-button'>
-                PARTICIPAR
-            </button>
-        </div>
 
-        <div className='sorteo-card col-1'>
-            <h3>Sorteo 3</h3>
-            <div>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Maxime laudantium fugit quaerat doloremque, voluptatum facere aut repellat, 
-                voluptate illo, perspiciatis consectetur aperiam incidunt deserunt ad exercitationem. 
-                Quasi ut eveniet consequatur.
+            <div className='sorteo-card col'>
+                <h3>Sorteo 3</h3>
+                <div>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Facere quam reiciendis eveniet iste unde impedit, qui molestias accusamus quae minima corporis asperiores
+                </div>
+                <button  className='sorteo-button'>
+                    PARTICIPAR
+                </button>
             </div>
-            <button  className='sorteo-button'>
-                PARTICIPAR
-            </button>
+
         </div>
 
     </div>

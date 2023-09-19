@@ -38,7 +38,7 @@ export const Inicio = ({noticas}) => {
             <Cumpleaños pagina={pagina}/>            
           </div>
 
-          <div className="sorteos col-8">          
+          <div className="sorteos-container col-8">          
             <Sorteos />
           </div>
 

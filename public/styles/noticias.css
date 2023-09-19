@@ -1,14 +1,39 @@
-.calendario{
+.noticias-container{
     grid-area: contenido;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    margin-bottom: 40px;
+    background: linear-gradient(0deg, #FFFF 95%, rgb(235, 230, 230));
 }
-.calendario-contenido{
-    width: 90%;
-    display: flex;
-    flex-flow: row wrap-reverse;
-    justify-content: center;
-    align-items: center;
+.noticia{
+    padding: 10px;
+    margin: 0px 20px 0px 20px;
+    position: relative;
+}
+.noticia img{
+    width: 100%;
+    height: fit-content;
+}
+
+.noticia div{
+    font-weight: normal;
+    font-size: 12px;
+}
+.noticia a{
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #353132;
+    color: #FFF;
+    text-decoration: none;
+    width: 95%;
+    text-align: center;
+    letter-spacing: 2.16px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0px;
+    margin: 5px 0px 5px 0px;
+}
+.noticia h3{
+    font-weight: bolder;
 }

@@ -1,17 +1,17 @@
-.sorteos-container{
+.sorteos{
     background: var(--Dark, #353132);
+    width: 100%;
 }
 .sorteo-button{
     color: #F2F2F2;
     background-color: #353132;
-    width: 50%;
+    width: max-content;
     height: max-content;
     padding: 2px    ;
     flex-shrink: 0;   
     border-radius: 10px;
     border: transparent;
     letter-spacing: 2.16px;
-    margin-bottom: 20px;
 }
 .sorteo-verTodos{
     color: #353132;
@@ -25,13 +25,11 @@
 .sorteo-card{
     margin: 0px 10px 0px 10px;
     background-color: #FFF;
-    width: 18%;
-    height: max-content;
-    flex-shrink: 0;
+    width: 100%;
     fill: #FFFF;
     filter: drop-shadow(0px 2.767256498336792px 2.2138051986694336px rgba(0, 0, 0, 0.03)) drop-shadow(0px 6.650102138519287px 5.32008171081543px rgba(0, 0, 0, 0.04)) drop-shadow(0px 12.521552085876465px 10.017241477966309px rgba(0, 0, 0, 0.04)) drop-shadow(0px 22.3363094329834px 17.869047164916992px rgba(0, 0, 0, 0.04)) drop-shadow(0px 41.777610778808594px 33.422088623046875px rgba(0, 0, 0, 0.05)) drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.07));
     border-radius: 10px;
-
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +42,6 @@
 .sorteo-card div{
     text-align: center; 
     padding: 10px;
-    margin: 10px 0px 20px 0px;   
 }
 
 .ganador{
