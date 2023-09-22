@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 import '../../../public/styles/noticias.css';
 
 export const Noticias = ({noticias}) => {
-  
-  useEffect(() => {
-    console.log(noticias);
-  }, [])
 
   if (noticias){
     return (    

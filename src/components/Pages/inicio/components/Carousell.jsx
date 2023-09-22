@@ -13,7 +13,7 @@ export const Carousell = () => {
             <Link to={`${import.meta.env.VITE_URL}/calendario`}>
               <img            
                 // src= {`${import.meta.env.VITE_URL}/noticias/02.jpg`}
-                src="/noticias/banner-portada.jpeg"
+                src="./noticias/banner-portada.jpeg"
                 alt="First slide"
               />
             </Link>
@@ -28,7 +28,7 @@ export const Carousell = () => {
               <img
                 className="d-block"
                 // src= {`${import.meta.env.VITE_URL}/noticias/01.jpg`}
-                src="/noticias/banner-portada2.jpeg"
+                src="./noticias/banner-portada2.jpeg"
                 alt="Second slide"
               />
                <Carousel.Caption id="carouselCaption-item">
@@ -43,7 +43,7 @@ export const Carousell = () => {
               <img
                 className="d-block"
                 // src= {`${import.meta.env.VITE_URL}/noticias/03.jpg`}
-                src="/noticias/banner-portada.jpeg"
+                src="./noticias/banner-portada.jpeg"
                 alt="Third slide"
               />
                <Carousel.Caption id="carouselCaption-item">
