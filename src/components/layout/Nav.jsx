@@ -25,7 +25,7 @@ export const NavBarN = ({usuario, setUsuario}) => {
 
         <Navbar.Collapse id="basic-navbar-nav ">
           <Nav className="nav fs-5" >
-            <NavLink to = '/' className={({isActive}) => isActive ? 'isActive' : 'ancor'}>INICIO</NavLink>          
+            <NavLink to = {`${import.meta.env.VITE_URL}`} className={({isActive}) => isActive ? 'isActive' : 'ancor'}>INICIO</NavLink>          
             {/* <NavDropdown className="ancor2 ms-3" title="NOTICIAS" id="basic-nav-dropdown">
               <NavDropdown.Item href="https://beta.es.reactjs.org/" target='_blank'>Action</NavDropdown.Item>
 

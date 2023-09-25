@@ -11,6 +11,9 @@ import { noticias } from '../helpers/data';
 import { Calendario } from "../components/Pages/inicio/components/Calendario";
 import '../../public/styles/login.css';
 
+// GETNEWS
+import { getNews } from "../helpers/getNews";
+
 export const Enrutador = () => {
 
   //Estados
@@ -37,6 +40,11 @@ export const Enrutador = () => {
       };
   };
   
+  const getNews = () => {
+
+    return noticias
+
+  }
 
   if (usuario === '' && error !== '' ) {
     return (
@@ -87,8 +95,8 @@ export const Enrutador = () => {
     
           {/* Contenido */}
           <Routes>
-            <Route exact path= '/' element={<Inicio noticias={noticias} />} />
-            <Route exact path= {`${import.meta.env.VITE_URL}/noticias`} element={<Noticias noticias={noticias} />} />
+            <Route exact path= {`${import.meta.env.VITE_URL}`} element={<Inicio noticias={noticias} />} />
+            <Route exact path= {`${import.meta.env.VITE_URL}/noticias`} element={<Noticias getNews = {getNews} />} />
             <Route exact path= {`${import.meta.env.VITE_URL}/noticia/:id`} element={<Noticia noticias= {noticias}/>} />
             <Route exact path= {`${import.meta.env.VITE_URL}/calendario`} element={<Calendario/>} />                        
             <Route exact path= {`${import.meta.env.VITE_URL}/sugerencias`} element={<Sugerencias/>} />
