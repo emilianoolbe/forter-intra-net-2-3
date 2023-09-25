@@ -1,17 +1,29 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { getNews } from '../../helpers/getNews';
+import { useDispatch, useSelector } from "react-redux";
+import { setNoticias } from "../../reducer/noticias/noticiasSlice";
 import '../../../public/styles/noticias.css';
 
-export const Noticias = ({getNews}) => {
+export const Noticias = () => {
 
-  const noticias = getNews()
+  const dispatch = useDispatch();
+  const {noticiasList}  = useSelector(state => state.news);
 
-  if (noticias){
+  //Efectos
+  useEffect(() => {
+    if (getNews) {
+      dispatch(setNoticias(getNews()));
+    }
+  },[dispatch]);
+
+
+  if (noticiasList){
     return (    
       <div className="noticias-container">
         <div className="row justify-content-center aling-items-center w-50 mt-4">
           {
-            noticias.map((noticia, i) => {
+            noticiasList.map((noticia, i) => {
               return(
               <div className="noticia col-5" key={i}>
                   <img src={noticia.img} alt="" />

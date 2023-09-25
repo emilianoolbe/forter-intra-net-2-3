@@ -2,11 +2,11 @@ import React from 'react'
 import { NavBarN } from './Nav'
 import '../../../public/styles/header.css';
 
-export const Header = ({usuario, setUsuario}) => {
+export const Header = () => {
   return (
     <header className='header'>
       <div>
-        <NavBarN usuario = {usuario} setUsuario = {setUsuario}/>
+        <NavBarN/>
       </div>
      
     </header>

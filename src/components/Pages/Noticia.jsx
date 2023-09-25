@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from "react-router-dom";
 import '../../../public/styles/noticia.css';
-import { noticiasDeInteres } from '../../helpers/dataInteres';
+import { getInterestedNews } from '../../helpers/getInterestedNews';
+import { useDispatch, useSelector } from 'react-redux';
+import { setNoticiasDeInteres } from '../../reducer/noticias/noticiasSlice';
 
 
-export const Noticia = ({noticias}) => {
+export const Noticia = () => {
+
+    const dispatch = useDispatch();
+    const { noticiasDeInteres, noticiasList } = useSelector(state => state.news);
+
+    useEffect(() => {
+        if (getInterestedNews) {
+            dispatch(setNoticiasDeInteres(getInterestedNews()));
+        };
+    },[dispatch])
 
     let {id} = useParams();
-    let noticia = noticias.filter(noticia => {return noticia.id == id});
+    let noticia = noticiasList.filter(noticia => {return noticia.id == id});
     noticia = noticia[0];
 
     return (
@@ -65,7 +76,7 @@ export const Noticia = ({noticias}) => {
                             )
                         })
                     }
-                    <Link className='todas-las-noticias' to={`${import.meta.env.VITE_URL}/noticias`}>TODAS LAS NOTICIAS</Link>          
+                        <Link className='todas-las-noticias' to={`${import.meta.env.VITE_URL}/noticias`}>TODAS LAS NOTICIAS</Link>          
                     </div>                  
                 </div>
            </div>

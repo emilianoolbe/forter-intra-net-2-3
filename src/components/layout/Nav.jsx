@@ -3,13 +3,17 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import '../../../public/styles/navbar.css';
+import { useDispatch } from "react-redux";
+import { logout } from "../../reducer/user/userSlice";
 
-export const NavBarN = ({usuario, setUsuario}) => {
+export const NavBarN = () => {
 
+  const dispatch = useDispatch();
+  
   //Métodos 
   const handlerLogout = () => {
     
-    setUsuario('');
+    dispatch(logout());
     {/* Quitar de sesión */}
 
   };
