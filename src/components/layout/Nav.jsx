@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import '../../../public/styles/navbar.css';
 import { useDispatch } from "react-redux";
 import { logout } from "../../reducer/user/userSlice";
+import { clearNews } from "../../reducer/noticias/noticiasSlice";
 
 export const NavBarN = () => {
 
@@ -13,8 +14,9 @@ export const NavBarN = () => {
   //Métodos 
   const handlerLogout = () => {
     
-    dispatch(logout());
     {/* Quitar de sesión */}
+    dispatch(clearNews());
+    dispatch(logout());
 
   };
   

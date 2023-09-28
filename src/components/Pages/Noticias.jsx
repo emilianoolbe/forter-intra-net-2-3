@@ -4,6 +4,7 @@ import { getNews } from '../../helpers/getNews';
 import { useDispatch, useSelector } from "react-redux";
 import { setNoticias } from "../../reducer/noticias/noticiasSlice";
 import '../../../public/styles/noticias.css';
+import { getUser } from "../../helpers/getUser";
 
 export const Noticias = () => {
 
@@ -15,6 +16,8 @@ export const Noticias = () => {
     if (getNews) {
       dispatch(setNoticias(getNews()));
     }
+    const USERS = getUser()
+    console.log(USERS);
   },[dispatch]);
 
 

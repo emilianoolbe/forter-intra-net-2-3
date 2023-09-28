@@ -14,9 +14,13 @@ export const noticiasSlice = createSlice({
         },
         setNoticiasDeInteres: (state, action) => {
             state.noticiasDeInteres = [...action.payload]
+        },
+        clearNews: (state) => {
+            state.noticiasList = [];
+            state.noticiasDeInteres = [];
         }
     }
 });
 
-export const { setNoticias, setNoticiasDeInteres } = noticiasSlice.actions;
+export const { setNoticias, setNoticiasDeInteres, clearNews } = noticiasSlice.actions;
 export default noticiasSlice.reducer;
